@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "react": "^0.14.8",
-    "react-dom": "^0.14.8"
+    "react-dom": "^0.14.8",
+    "react-keydown": "^1.6.3"
   }
 }
