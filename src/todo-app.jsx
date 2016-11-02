@@ -31,9 +31,19 @@ export default class TodoApp extends React.Component {
 	handlerOnChange(event){
 		this.setState({newTodo: event.target.value});
 	}
+
+	compareItems = (item1, item2) =>{
+		let titleOfItem1 = item1.title.toUpperCase();
+		let titleOfItem2 = item2.title.toUpperCase();
+		if(titleOfItem1 > titleOfItem2)
+			return 1;
+		if(titleOfItem1 < titleOfItem2)
+			return -1;
+		return 0;
+	}
 	
 	showTodoItems(){
-		return this.state.items.map(item => {
+		return this.state.items.sort(this.compareItems).map(item => {
 			return <TodoItem todo={item}></TodoItem>
 		});
 	}

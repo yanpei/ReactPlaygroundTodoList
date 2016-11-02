@@ -65,11 +65,13 @@ describe("TodoApp", function() {
 			addNewItem("Learn React");
 			addNewItem("Do homework");
 			addNewItem("Call mum");
+			addNewItem("compare items");
 
-			expect(todoItems.length).toEqual(3);
+			expect(todoItems.length).toEqual(4);
 			expect(todoItems[0].textContent).toEqual("Call mum");
-			expect(todoItems[1].textContent).toEqual("Do homework");
-			expect(todoItems[2].textContent).toEqual("Learn React");
+			expect(todoItems[1].textContent).toEqual("compare items");
+			expect(todoItems[2].textContent).toEqual("Do homework");
+			expect(todoItems[3].textContent).toEqual("Learn React");
 		});
 	});
 
