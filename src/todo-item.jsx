@@ -9,11 +9,15 @@ export default class TodoItem extends React.Component {
 		super(props);
 	}
 
+	handelerChange(){
+		this.props.changeItemCheckBox(this.props.Key);
+	}
+
 	render() {
 		return (
-			<li className="">
+			<li className={this.props.todo.className}>
 				<div className="view">
-					<input className="toggle" type="checkbox" />
+					<input className="toggle" checked={this.props.todo.isCompleted} onChange={this.handelerChange.bind(this)} type="checkbox" />
 					<label>{this.props.todo.title}</label>
 					<button className="destroy" />
 				</div>

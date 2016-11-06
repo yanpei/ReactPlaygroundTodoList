@@ -21,7 +21,11 @@ export default class TodoApp extends React.Component {
 		if(event!==undefined) {
 			if (event.keyCode === ENTER_KEY) {
 				if (this.state.newTodo.trim() !== '') {
-					this.setState({items: this.state.items.concat({title: this.state.newTodo})});
+					this.setState({items: this.state.items.concat({
+						title: this.state.newTodo,
+						isCompleted: false,
+						className: ''
+					})});
 					this.state.newTodo = '';
 				}
 			}
@@ -43,9 +47,21 @@ export default class TodoApp extends React.Component {
 	}
 	
 	showTodoItems(){
-		return this.state.items.sort(this.compareItems).map(item => {
-			return <TodoItem todo={item}></TodoItem>
+		return this.state.items.sort(this.compareItems).map((item,index) => {
+			return <TodoItem Key={index} todo={item} changeItemCheckBox={this.changeItemCheckBox.bind(this)}></TodoItem>
 		});
+	}
+
+	changeItemCheckBox(index){
+		let item = this.state.items[index];
+		item.isCompleted = !item.isCompleted;
+		if(item.isCompleted){
+			item.className = "completed";
+		}
+		else {
+			item.className = "";
+		}
+		this.setState({items: this.state.items});
 	}
 
 	render() {
