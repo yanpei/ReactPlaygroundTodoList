@@ -75,7 +75,7 @@ describe("TodoApp", function() {
 		});
 	});
 
-	describe('when completing todo items', function() {
+	fdescribe('when completing todo items', function() {
 		beforeEach(function() {
 			addNewItem("Learn React");
 			addNewItem("Do homework");

@@ -13,7 +13,7 @@ export default class TodoApp extends React.Component {
 
 		this.state = {
 			newTodo: null,
-			items: []
+			items: [],
 		};
 	}
 
@@ -55,13 +55,30 @@ export default class TodoApp extends React.Component {
 	changeItemCheckBox(index){
 		let item = this.state.items[index];
 		item.isCompleted = !item.isCompleted;
+		let isAllCompleted;
 		if(item.isCompleted){
 			item.className = "completed";
 		}
 		else {
 			item.className = "";
 		}
-		this.setState({items: this.state.items});
+		if(this.state.items.every(item => item.isCompleted)){
+			isAllCompleted = true;
+		}
+		this.setState({
+			items: this.state.items,
+			isAllCompleted: isAllCompleted});
+	}
+
+	changeToggleAllCheckbox(event){
+		let isCompleted = event.target.checked;
+		this.setState({
+			items: this.state.items.map(item => {
+				item.isCompleted = isCompleted;
+				item.className = isCompleted ? "completed" : "";
+				return item}),
+			isAllCompleted: isCompleted
+		})
 	}
 
 	render() {
@@ -79,7 +96,9 @@ export default class TodoApp extends React.Component {
 				</header>
 				<section className="main">
 					<input className="toggle-all"
-						   type="checkbox" />
+						   type="checkbox"
+						   checked={this.state.isAllCompleted}
+						   onChange={this.changeToggleAllCheckbox.bind(this)}/>
 					<ul className="todo-list">
 						{this.showTodoItems()}
 					</ul>
