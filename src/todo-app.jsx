@@ -62,17 +62,15 @@ export default class TodoApp extends React.Component {
 
 	changeItemCheckBox(index){
 		let item = this.state.items[index];
-		item.isCompleted = !item.isCompleted;
 		let isAllCompleted;
-		if(item.isCompleted){
-			item.className = COMPLETED_CLASS_NAME;
-		}
-		else {
-			item.className = UNCOMPLETED_CLASS_NAME;
-		}
+
+		item.isCompleted = !item.isCompleted;
+		item.className = item.isCompleted ? COMPLETED_CLASS_NAME : UNCOMPLETED_CLASS_NAME;
+
 		if(this.state.items.every(item => item.isCompleted)){
 			isAllCompleted = true;
 		}
+
 		this.setState({
 			items: this.state.items,
 			isAllCompleted: isAllCompleted});
