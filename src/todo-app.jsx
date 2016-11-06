@@ -5,7 +5,10 @@ import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import TodoItem from './todo-item.jsx';
 
-var ENTER_KEY = 13;
+var ENTER_KEY = 13,
+	COMPLETED_CLASS_NAME = 'completed',
+	UNCOMPLETED_CLASS_NAME = '';
+
 
 export default class TodoApp extends React.Component {
 	constructor(props) {
@@ -13,7 +16,7 @@ export default class TodoApp extends React.Component {
 
 		this.state = {
 			newTodo: null,
-			items: [],
+			items: []
 		};
 	}
 
@@ -24,7 +27,7 @@ export default class TodoApp extends React.Component {
 					this.setState({items: this.state.items.concat({
 						title: this.state.newTodo,
 						isCompleted: false,
-						className: ''
+						className: UNCOMPLETED_CLASS_NAME
 					})});
 					this.state.newTodo = '';
 				}
@@ -44,11 +47,16 @@ export default class TodoApp extends React.Component {
 		if(titleOfItem1 < titleOfItem2)
 			return -1;
 		return 0;
-	}
+	};
 	
 	showTodoItems(){
 		return this.state.items.sort(this.compareItems).map((item,index) => {
-			return <TodoItem Key={index} todo={item} changeItemCheckBox={this.changeItemCheckBox.bind(this)}></TodoItem>
+			return <TodoItem
+						Key={index}
+						todo={item}
+						changeItemCheckBox={this.changeItemCheckBox.bind(this)}
+						deleteItem={this.deleteItem.bind(this)}>
+			       </TodoItem>
 		});
 	}
 
@@ -57,10 +65,10 @@ export default class TodoApp extends React.Component {
 		item.isCompleted = !item.isCompleted;
 		let isAllCompleted;
 		if(item.isCompleted){
-			item.className = "completed";
+			item.className = COMPLETED_CLASS_NAME;
 		}
 		else {
-			item.className = "";
+			item.className = UNCOMPLETED_CLASS_NAME;
 		}
 		if(this.state.items.every(item => item.isCompleted)){
 			isAllCompleted = true;
@@ -75,9 +83,16 @@ export default class TodoApp extends React.Component {
 		this.setState({
 			items: this.state.items.map(item => {
 				item.isCompleted = isCompleted;
-				item.className = isCompleted ? "completed" : "";
+				item.className = isCompleted ? COMPLETED_CLASS_NAME : UNCOMPLETED_CLASS_NAME;
 				return item}),
 			isAllCompleted: isCompleted
+		})
+	}
+
+	deleteItem(index){
+		this.state.items.splice(index,1);
+		this.setState({
+			items: this.state.items
 		})
 	}
 

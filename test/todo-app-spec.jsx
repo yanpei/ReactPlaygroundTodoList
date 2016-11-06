@@ -75,7 +75,7 @@ describe("TodoApp", function() {
 		});
 	});
 
-	fdescribe('when completing todo items', function() {
+	describe('when completing todo items', function() {
 		beforeEach(function() {
 			addNewItem("Learn React");
 			addNewItem("Do homework");
@@ -138,6 +138,7 @@ describe("TodoApp", function() {
 
 		it('should remove the item from the list', function() {
 			deleteItem(todoItems[0]); // will delete 'Call Mum' because of sorting
+			console.log(todoItems.length);
 			expect(todoItems.length).toEqual(2);
 		});
 

@@ -4,6 +4,7 @@
     <list default="true" id="93b88224-a560-4964-b7ef-a043d1aac786" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/todo-app.jsx" afterPath="$PROJECT_DIR$/src/todo-app.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/todo-item.jsx" afterPath="$PROJECT_DIR$/src/todo-item.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/todo-app-spec.jsx" afterPath="$PROJECT_DIR$/test/todo-app-spec.jsx" />
     </list>
     <ignored path="ReactPlaygroundTodoList.iws" />
@@ -28,11 +29,9 @@
       <file leaf-file-name="todo-app-spec.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/todo-app-spec.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="125" column="21" selection-start-line="125" selection-start-column="16" selection-end-line="125" selection-end-column="34" />
-              <folding>
-                <element signature="e#5022#5696#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="-4.2884617">
+              <caret line="84" column="17" selection-start-line="84" selection-start-column="16" selection-end-line="84" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -50,8 +49,8 @@
       <file leaf-file-name="todo-app.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/todo-app.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36472347">
-              <caret line="77" column="40" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
+            <state vertical-scroll-proportion="-0.41255605">
+              <caret line="85" column="92" selection-start-line="85" selection-start-column="92" selection-end-line="85" selection-end-column="92" />
               <folding />
             </state>
           </provider>
@@ -60,8 +59,8 @@
       <file leaf-file-name="todo-item.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/todo-item.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.25">
-              <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+            <state vertical-scroll-proportion="-6.8653846">
+              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -319,9 +318,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#5022#5696#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -415,9 +412,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="115" column="11" selection-start-line="115" selection-start-column="11" selection-end-line="115" selection-end-column="11" />
-          <folding>
-            <element signature="e#5022#5696#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -480,9 +475,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="152" column="27" selection-start-line="152" selection-start-column="27" selection-end-line="152" selection-end-column="27" />
-          <folding>
-            <element signature="e#5022#5696#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -529,9 +522,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#5022#5696#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -689,28 +680,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/todo-app-spec.jsx">
+    <entry file="file://$PROJECT_DIR$/src/todo-item.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="125" column="21" selection-start-line="125" selection-start-column="16" selection-end-line="125" selection-end-column="34" />
-          <folding>
-            <element signature="e#5022#5696#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="-6.8653846">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/todo-item.jsx">
+    <entry file="file://$PROJECT_DIR$/test/todo-app-spec.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.25">
-          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        <state vertical-scroll-proportion="-4.2884617">
+          <caret line="84" column="17" selection-start-line="84" selection-start-column="16" selection-end-line="84" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/todo-app.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36472347">
-          <caret line="77" column="40" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
+        <state vertical-scroll-proportion="-0.41255605">
+          <caret line="85" column="92" selection-start-line="85" selection-start-column="92" selection-end-line="85" selection-end-column="92" />
           <folding />
         </state>
       </provider>
